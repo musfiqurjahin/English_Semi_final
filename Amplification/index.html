@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amplified Sustainable Development Goals - Detailed View</title>
+    <title>Amplified Sustainable Development Goals</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -23,7 +23,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #333;
             background-color: #f5f7f9;
             padding-bottom: 2rem;
@@ -58,7 +58,7 @@
         
         .intro {
             background: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
             margin-bottom: 2.5rem;
@@ -68,7 +68,7 @@
         .goals-container {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 2.5rem;
             margin-top: 2rem;
         }
         
@@ -76,7 +76,7 @@
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             transition: var(--transition);
         }
         
@@ -86,105 +86,45 @@
         
         .goal-header {
             color: white;
-            padding: 1.5rem;
+            padding: 1.8rem;
             display: flex;
             align-items: center;
             gap: 1.5rem;
         }
         
         .goal-number {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 700;
-            opacity: 0.9;
-            min-width: 60px;
+            opacity: 0.95;
+            min-width: 70px;
             text-align: center;
         }
         
         .goal-title {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 600;
         }
         
         .goal-content {
-            padding: 2rem;
+            padding: 2.5rem;
         }
         
         .goal-description {
+            line-height: 1.9;
+            font-size: 1.15rem;
+        }
+        
+        .goal-description p {
             margin-bottom: 1.5rem;
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
-        
-        .goal-keywords {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #eee;
-        }
-        
-        .keyword {
-            background: #e8f0fe;
-            color: var(--primary);
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        
-        .filters {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        
-        .filter-btn {
-            padding: 0.6rem 1.2rem;
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-        
-        .nav-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .nav-btn {
-            padding: 0.8rem 1.5rem;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
-        }
-        
-        .nav-btn:hover {
-            background: #0d5bba;
         }
         
         footer {
             text-align: center;
-            margin-top: 3rem;
-            padding: 1.5rem;
+            margin-top: 4rem;
+            padding: 2rem;
             color: #666;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            border-top: 1px solid #eee;
         }
         
         @media (max-width: 768px) {
@@ -195,25 +135,20 @@
             .goal-header {
                 flex-direction: column;
                 text-align: center;
-                gap: 0.5rem;
+                gap: 0.8rem;
+                padding: 1.5rem;
             }
             
-            .filters {
-                flex-direction: column;
-                align-items: center;
+            .goal-number {
+                font-size: 2.2rem;
             }
             
-            .filter-btn {
-                width: 80%;
+            .goal-title {
+                font-size: 1.5rem;
             }
             
-            .nav-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .nav-btn {
-                width: 80%;
+            .goal-content {
+                padding: 1.8rem;
             }
         }
     </style>
@@ -227,247 +162,265 @@
     <div class="container">
         <div class="intro">
             <h2>Understanding the SDGs in Depth</h2>
-            <p>The Sustainable Development Goals (SDGs) are a universal call to action to end poverty, protect the planet, and ensure that all people enjoy peace and prosperity by 2030. While the goal statements themselves are concise, their full meaning and implications require deeper exploration. This document provides an amplified explanation of each goal, expanding on its broader context, interconnectedness with other goals, and transformative potential.</p>
-            <p>Each amplification moves beyond the simple title to explore the deeper meaning, systemic changes required, and ultimate ambition of each goal.</p>
-        </div>
-        
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">All Goals</button>
-            <button class="filter-btn" data-filter="social">Social Development</button>
-            <button class="filter-btn" data-filter="economic">Economic Development</button>
-            <button class="filter-btn" data-filter="environmental">Environmental Protection</button>
+            <p>The Sustainable Development Goals (SDGs) are a universal call to action to end poverty, protect the planet, and ensure that all people enjoy peace and prosperity by 2030. While the goal statements themselves are concise, their full meaning and implications require deeper exploration.</p>
+            <p>This document provides an amplified explanation of each goal, expanding on its broader context, interconnectedness with other goals, and transformative potential. Each amplification moves beyond the simple title to explore the deeper meaning, systemic changes required, and ultimate ambition of each goal.</p>
         </div>
         
         <div class="goals-container">
             <!-- Goal 1 -->
-            <div class="goal-item" data-category="social">
+            <div class="goal-item">
                 <div class="goal-header" style="background-color: #E5243B;">
                     <div class="goal-number">01</div>
                     <div class="goal-title">No Poverty</div>
                 </div>
                 <div class="goal-content">
                     <div class="goal-description">
-                        <p>This is not merely about lifting individuals above an arbitrary financial line. It is a fundamental commitment to eradicating all forms of poverty, including hunger, homelessness, and energy poverty. It means building resilient communities where everyone, especially the most vulnerable, has the rights, resources, and security to not just survive, but to thrive.</p>
-                        <p>It recognizes that poverty is not a natural state but a systemic failure, and its eradication is the first step toward human dignity and global stability. This goal calls for implementing social protection systems, ensuring equal rights to economic resources, and building the resilience of the poor against climate-related extreme events and other economic, social, and environmental shocks.</p>
-                    </div>
-                    <div class="goal-keywords">
-                        <span class="keyword">Economic Security</span>
-                        <span class="keyword">Social Protection</span>
-                        <span class="keyword">Resilience</span>
-                        <span class="keyword">Vulnerable Communities</span>
+                        <p>This goal represents a fundamental commitment to eradicating all forms of poverty in all its dimensions. It moves beyond merely lifting individuals above an arbitrary financial line to address the systemic causes and manifestations of poverty, including hunger, homelessness, energy poverty, and social exclusion.</p>
+                        <p>The amplification of this goal recognizes that poverty is not a natural state but a result of systemic failures in economic, social, and political structures. It calls for building resilient communities where everyone, especially the most vulnerable, has the rights, resources, social protection systems, and security to not just survive, but to thrive with dignity.</p>
+                        <p>This requires implementing nationally appropriate social protection systems and measures for all, ensuring equal rights to economic resources, access to basic services, ownership and control over land and other forms of property, and building the resilience of the poor against climate-related extreme events and other economic, social, and environmental shocks.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Goal 2 -->
-            <div class="goal-item" data-category="social">
+            <div class="goal-item">
                 <div class="goal-header" style="background-color: #DDA63A;">
                     <div class="goal-number">02</div>
                     <div class="goal-title">Zero Hunger</div>
                 </div>
                 <div class="goal-content">
                     <div class="goal-description">
-                        <p>This goal reaches far beyond providing a single meal. It envisions a world where every person, every day, has access to sufficient, safe, and nutritious food. It calls for a transformation of our global food systems—promoting sustainable agriculture, supporting small-scale farmers, protecting genetic diversity, and ending the perversity of food waste in a world of want.</p>
-                        <p>It is about achieving food security for all, ensuring that bodies and minds are nourished to reach their full potential. This requires investments in rural infrastructure, agricultural research, technology development, and measures to ensure the proper functioning of food commodity markets. It also involves addressing the distortions in world agricultural markets that disadvantage small-scale farmers in developing countries.</p>
-                    </div>
-                    <div class="goal-keywords">
-                        <span class="keyword">Food Security</span>
-                        <span class="keyword">Nutrition</span>
-                        <span class="keyword">Sustainable Agriculture</span>
-                        <span class="keyword">Food Systems</span>
+                        <p>This goal envisions a comprehensive transformation of our global food systems to ensure every person has access to sufficient, safe, and nutritious food year-round. It addresses not just immediate hunger but the underlying structures that perpetuate food insecurity.</p>
+                        <p>The amplification recognizes that achieving zero hunger requires sustainable agricultural practices that increase productivity and production, help maintain ecosystems, strengthen capacity for adaptation to climate change, and progressively improve land and soil quality. It emphasizes supporting small-scale farmers, particularly women, indigenous peoples, and family farmers, through access to knowledge, financial services, and markets.</p>
+                        <p>This goal also calls for correcting and preventing trade restrictions and distortions in world agricultural markets, adopting measures to ensure the proper functioning of food commodity markets, and ending the paradox of excessive food waste in a world where hunger persists. It represents a commitment to nurturing both people and the planet through sustainable food systems.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Goal 3 -->
-            <div class="goal-item" data-category="social">
+            <div class="goal-item">
                 <div class="goal-header" style="background-color: #4C9F38;">
                     <div class="goal-number">03</div>
                     <div class="goal-title">Good Health and Well-being</div>
                 </div>
                 <div class="goal-content">
                     <div class="goal-description">
-                        <p>This is a pledge to ensure healthy lives for all ages. It amplifies "health" to encompass physical, mental, and emotional well-being. It means conquering not just pandemics but also neglected tropical diseases; reducing not only child mortality but also deaths from traffic accidents and pollution; ensuring not just access to doctors but also to mental healthcare services.</p>
-                        <p>It is about creating societies that proactively promote wellness and provide universal health coverage, leaving no one's well-being to chance. This goal addresses all major health priorities, including reproductive, maternal and child health; communicable, non-communicable and environmental diseases; universal health coverage; and access to safe, effective, quality and affordable medicines and vaccines.</p>
-                    </div>
-                    <div class="goal-keywords">
-                        <span class="keyword">Healthcare Access</span>
-                        <span class="keyword">Well-being</span>
-                        <span class="keyword">Disease Prevention</span>
-                        <span class="keyword">Universal Health Coverage</span>
+                        <p>This goal represents a comprehensive pledge to ensure healthy lives and promote well-being for all at all ages. It expands the concept of health beyond the absence of disease to encompass complete physical, mental, and social well-being.</p>
+                        <p>The amplification addresses major health priorities including reducing maternal mortality; ending preventable deaths of newborns and children; combating communicable diseases; reducing non-communicable diseases; preventing and treating substance abuse; reducing road injuries and deaths; ensuring universal access to sexual and reproductive health-care services; and achieving universal health coverage.</p>
+                        <p>This goal recognizes that health is influenced by multiple factors beyond healthcare, including environmental conditions, economic status, education, and social equity. It calls for creating societies that proactively promote wellness through preventive healthcare, health education, and addressing the social determinants of health, ensuring that no one's well-being is left to chance.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Goal 4 -->
-            <div class="goal-item" data-category="social">
+            <div class="goal-item">
                 <div class="goal-header" style="background-color: #C5192D;">
                     <div class="goal-number">04</div>
                     <div class="goal-title">Quality Education</div>
                 </div>
                 <div class="goal-content">
                     <div class="goal-description">
-                        <p>This goal moves past mere school enrollment. It demands inclusive and equitable quality education and lifelong learning opportunities for all. It means safe schools, qualified teachers, and relevant curricula that foster critical thinking, sustainability, and global citizenship.</p>
-                        <p>It is about breaking the cycles of inequality, empowering girls, and ensuring that education truly is a pathway to a better future, equipping learners with the skills to navigate and improve the 21st century. This goal involves building and upgrading education facilities, increasing the supply of qualified teachers, and expanding scholarships for developing countries. It also emphasizes the importance of technical and vocational education for relevant skills development.</p>
-                    </div>
-                    <div class="goal-keywords">
-                        <span class="keyword">Lifelong Learning</span>
-                        <span class="keyword">Educational Equity</span>
-                        <span class="keyword">Skills Development</span>
-                        <span class="keyword">Inclusive Education</span>
+                        <p>This goal moves beyond mere school enrollment to demand inclusive and equitable quality education and lifelong learning opportunities for all. It recognizes education as a fundamental human right and an essential driver for achieving all other Sustainable Development Goals.</p>
+                        <p>The amplification emphasizes safe, violence-free, and inclusive learning environments with qualified teachers, adequate facilities, and relevant curricula that foster critical thinking, creativity, sustainability, and global citizenship. It addresses the need to eliminate gender disparities and ensure equal access to all levels of education for vulnerable populations.</p>
+                        <p>This goal also focuses on substantially increasing the number of youth and adults with relevant technical and vocational skills for employment and entrepreneurship, ensuring that all learners acquire the knowledge and skills needed to promote sustainable development. It represents a commitment to breaking cycles of inequality and ensuring education truly serves as a pathway to personal development and a better future.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Goal 5 -->
-            <div class="goal-item" data-category="social">
+            <div class="goal-item">
                 <div class="goal-header" style="background-color: #FF3A21;">
                     <div class="goal-number">05</div>
                     <div class="goal-title">Gender Equality</div>
                 </div>
                 <div class="goal-content">
                     <div class="goal-description">
-                        <p>This is a call for a fundamental transformation of power dynamics. It is not about "helping women" but about dismantling the systemic social, economic, and political barriers that discriminate against women and girls everywhere. It requires ending gender-based violence, recognizing and valuing unpaid care work, ensuring full participation in leadership, and guaranteeing equal rights to economic resources.</p>
-                        <p>Gender equality is not a women's issue; it is a human rights issue and a necessary foundation for a peaceful and prosperous world. This goal involves reforming laws and policies to eliminate discrimination, adopting policies to recognize and value unpaid care work, enhancing the use of enabling technology to promote women's empowerment, and strengthening policies and legislation for gender equality.</p>
-                    </div>
-                    <div class="goal-keywords">
-                        <span class="keyword">Women Empowerment</span>
-                        <span class="keyword">Equal Rights</span>
-                        <span class="keyword">Social Transformation</span>
-                        <span class="keyword">Gender Equity</span>
+                        <p>This goal calls for a fundamental transformation of power dynamics and social structures to achieve gender equality and empower all women and girls. It addresses the root causes of discrimination rather than merely treating symptoms.</p>
+                        <p>The amplification recognizes that gender equality is not just a women's issue but a necessary foundation for a peaceful, prosperous, and sustainable world. It requires ending all forms of discrimination, violence, and harmful practices against women and girls; recognizing and valuing unpaid care and domestic work; ensuring women's full participation in leadership and decision-making; and guaranteeing equal rights to economic resources, property ownership, and financial services.</p>
+                        <p>This goal also emphasizes the need to adopt and strengthen policies and enforceable legislation for promoting gender equality and the empowerment of all women and girls at all levels. It represents a comprehensive approach to dismantling the systemic barriers that prevent the full realization of women's and girls' rights and potential.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Goal 6 -->
-            <div class="goal-item" data-category="environmental">
+            <div class="goal-item">
                 <div class="goal-header" style="background-color: #26BDE2;">
                     <div class="goal-number">06</div>
                     <div class="goal-title">Clean Water and Sanitation</div>
                 </div>
                 <div class="goal-content">
                     <div class="goal-description">
-                        <p>This goal addresses the most basic element of life: water. It insists on sustainable management of this precious resource. It means not only access to safe drinking water but also to adequate sanitation and hygiene, ending the practice of open defecation that spreads disease and compromises dignity.</p>
-                        <p>It involves protecting and restoring water-related ecosystems—rivers, lakes, and aquifers—from degradation and ensuring that no community ever has to fight a war over water. This goal calls for international cooperation in water harvesting, desalination, water efficiency, wastewater treatment, and recycling technologies. It also emphasizes the participation of local communities in improving water and sanitation management.</p>
-                    </div>
-                    <div class="goal-keywords">
-                        <span class="keyword">Water Security</span>
-                        <span class="keyword">Sanitation</span>
-                        <span class="keyword">Ecosystem Protection</span>
-                        <span class="keyword">Water Management</span>
+                        <p>This goal addresses the most fundamental element of life: water. It insists on sustainable management of this precious and finite resource to ensure availability and sustainable management of water and sanitation for all.</p>
+                        <p>The amplification moves beyond basic access to safe drinking water to include adequate sanitation and hygiene, ending the practice of open defecation that spreads disease and compromises dignity. It emphasizes improving water quality by reducing pollution, eliminating dumping, minimizing release of hazardous chemicals and materials, and increasing recycling and safe reuse.</p>
+                        <p>This goal also involves protecting and restoring water-related ecosystems—including mountains, forests, wetlands, rivers, aquifers, and lakes—from degradation. It recognizes that integrated water resources management at all levels is essential, as is international cooperation in water harvesting, desalination, water efficiency, wastewater treatment, and recycling technologies.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Goal 7 -->
-            <div class="goal-item" data-category="economic">
+            <div class="goal-item">
                 <div class="goal-header" style="background-color: #FCC30B;">
                     <div class="goal-number">07</div>
                     <div class="goal-title">Affordable and Clean Energy</div>
                 </div>
                 <div class="goal-content">
                     <div class="goal-description">
-                        <p>This is about powering potential. It demands a global energy transition from dirty, finite fossil fuels to clean, renewable, and modern energy sources like solar, wind, and thermal. It focuses on making this energy affordable and accessible to all, particularly the billion people who still lack electricity.</p>
-                        <p>This shift is crucial for combating climate change, powering economies, unlocking education (light to study by), and improving health (cleaner air and water). It represents both an environmental imperative and an opportunity for economic development. This goal involves expanding infrastructure and upgrading technology for supplying modern and sustainable energy services, especially in least developed countries and small island developing states.</p>
-                    </div>
-                    <div class="goal-keywords">
-                        <span class="keyword">Renewable Energy</span>
-                        <span class="keyword">Energy Access</span>
-                        <span class="keyword">Decarbonization</span>
-                        <span class="keyword">Energy Transition</span>
+                        <p>This goal demands a global energy transition from finite, polluting fossil fuels to clean, renewable, and modern energy sources. It recognizes energy as central to nearly every major challenge and opportunity facing humanity today.</p>
+                        <p>The amplification focuses on ensuring universal access to affordable, reliable, and modern energy services, particularly for the billions who still lack electricity or rely on harmful traditional biomass for cooking. It emphasizes increasing substantially the share of renewable energy in the global energy mix and doubling the global rate of improvement in energy efficiency.</p>
+                        <p>This goal also calls for enhancing international cooperation to facilitate access to clean energy research and technology, promoting investment in energy infrastructure and clean energy technology, and expanding infrastructure and upgrading technology for supplying modern and sustainable energy services for all in developing countries. It represents both an environmental imperative and an economic opportunity to power sustainable development.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Goal 8 -->
-            <div class="goal-item" data-category="economic">
+            <div class="goal-item">
                 <div class="goal-header" style="background-color: #A21942;">
                     <div class="goal-number">08</div>
                     <div class="goal-title">Decent Work and Economic Growth</div>
                 </div>
                 <div class="goal-content">
                     <div class="goal-description">
-                        <p>This goal challenges the notion that any growth is good growth. It calls for sustained, inclusive, and sustainable economic growth. "Decent work" means productive work that provides a fair income, security, safe working conditions, and social protection. It specifically targets youth unemployment and eradicates forced labor and child labor.</p>
-                        <p>It is about fostering entrepreneurship and innovation so that economic progress benefits everyone, not just a privileged few. This goal involves policies that support job creation, entrepreneurship, creativity and innovation, and encourage formalization of micro, small and medium-sized enterprises. It also calls for measures to eradicate forced labor, slavery and human trafficking.</p>
-                    </div>
-                    <div class="goal-keywords">
-                        <span class="keyword">Economic Growth</span>
-                        <span class="keyword">Job Creation</span>
-                        <span class="keyword">Labor Rights</span>
-                        <span class="keyword">Inclusive Economy</span>
+                        <p>This goal promotes sustained, inclusive, and sustainable economic growth, full and productive employment, and decent work for all. It challenges the notion that any economic growth is beneficial, emphasizing instead the quality and distribution of growth.</p>
+                        <p>The amplification focuses on achieving higher levels of economic productivity through diversification, technological upgrading, and innovation. It emphasizes promoting development-oriented policies that support productive activities, decent job creation, entrepreneurship, creativity, and innovation, and encouraging the formalization and growth of micro-, small-, and medium-sized enterprises.</p>
+                        <p>This goal also calls for improving global resource efficiency in consumption and production and endeavoring to decouple economic growth from environmental degradation. It recognizes the need to protect labor rights and promote safe and secure working environments for all workers, including migrant workers and those in precarious employment. It represents a commitment to economic systems that truly serve people and planet.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Goal 9 -->
-            <div class="goal-item" data-category="economic">
+            <div class="goal-item">
                 <div class="goal-header" style="background-color: #FD6925;">
                     <div class="goal-number">09</div>
                     <div class="goal-title">Industry, Innovation and Infrastructure</div>
                 </div>
                 <div class="goal-content">
                     <div class="goal-description">
-                        <p>This is the goal of building backbone. It promotes resilient sustainable infrastructure, inclusive industrialization, and fostering innovation. It means building roads, ports, and internet connectivity that integrate communities into the modern economy while minimizing environmental impact.</p>
-                        <p>It supports small-scale industries and ensures all countries can develop their technological capabilities. This is the physical and digital framework upon which all other development goals depend. This goal involves promoting inclusive and sustainable industrialization, increasing access of small-scale industries to financial services, upgrading infrastructure to make it sustainable, and enhancing scientific research and technological capabilities.</p>
-                    </div>
-                    <div class="goal-keywords">
-                        <span class="keyword">Infrastructure</span>
-                        <span class="keyword">Innovation</span>
-                        <span class="keyword">Industrialization</span>
-                        <span class="keyword">Technology</span>
+                        <p>This goal focuses on building resilient infrastructure, promoting inclusive and sustainable industrialization, and fostering innovation. It recognizes that infrastructure, industry, and technological progress are essential drivers of economic development and human well-being.</p>
+                        <p>The amplification emphasizes developing quality, reliable, sustainable, and resilient infrastructure to support economic development and human well-being, with a focus on affordable and equitable access for all. It promotes inclusive and sustainable industrialization and significantly raises industry's share of employment and gross domestic product in line with national circumstances.</p>
+                        <p>This goal also calls for enhancing scientific research, upgrading the technological capabilities of industrial sectors in all countries, and encouraging innovation and substantially increasing the number of research and development workers per million people. It recognizes the importance of supporting domestic technology development, research, and innovation in developing countries and providing access to information and communications technology.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Goal 10 -->
-            <div class="goal-item" data-category="social">
+            <div class="goal-item">
                 <div class="goal-header" style="background-color: #DD1367;">
                     <div class="goal-number">10</div>
                     <div class="goal-title">Reduced Inequality</div>
                 </div>
                 <div class="goal-content">
                     <div class="goal-description">
-                        <p>This goal explicitly targets the gap—within and between countries. It is a commitment to reducing inequality based on income, but also on age, sex, disability, race, ethnicity, origin, or religion. It calls for the empowerment and promotion of social, economic, and political inclusion of all.</p>
-                        <p>It means challenging discriminatory laws and adopting fiscal policies that actively redistribute opportunity, ensuring that the benefits of globalization are shared by all, not hoarded by the top 1%. This goal involves improving regulation of global financial markets, implementing policies for greater equality, facilitating migration and mobility, and enhancing representation for developing countries in global decision-making.</p>
-                    </div>
-                    <div class="goal-keywords">
-                        <span class="keyword">Social Inclusion</span>
-                        <span class="keyword">Economic Equality</span>
-                        <span class="keyword">Redistribution</span>
-                        <span class="keyword">Global Justice</span>
+                        <p>This goal addresses inequalities within and among countries, recognizing that extreme inequality threatens social stability, undermines democracy, and hampers economic growth. It calls for empowering and promoting the social, economic, and political inclusion of all, irrespective of age, sex, disability, race, ethnicity, origin, religion, or economic or other status.</p>
+                        <p>The amplification emphasizes progressively achieving and sustaining income growth of the bottom 40 percent of the population at a rate higher than the national average. It promotes the social, economic, and political inclusion of all, and ensures equal opportunity and reduces inequalities of outcome, including by eliminating discriminatory laws, policies, and practices and promoting appropriate legislation, policies, and action.</p>
+                        <p>This goal also calls for improved regulation and monitoring of global financial markets and institutions and strengthening the implementation of such regulations. It emphasizes facilitating orderly, safe, regular, and responsible migration and mobility of people, including through the implementation of planned and well-managed migration policies.</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Continue with the remaining goals in the same format -->
-            <!-- For brevity, I'll include one more example -->
+            <!-- Goal 11 -->
+            <div class="goal-item">
+                <div class="goal-header" style="background-color: #FD9D24;">
+                    <div class="goal-number">11</div>
+                    <div class="goal-title">Sustainable Cities and Communities</div>
+                </div>
+                <div class="goal-content">
+                    <div class="goal-description">
+                        <p>This goal focuses on making cities and human settlements inclusive, safe, resilient, and sustainable. It recognizes that with more than half of humanity living in cities—a proportion expected to increase—urban areas present both tremendous challenges and opportunities for sustainable development.</p>
+                        <p>The amplification emphasizes ensuring access for all to adequate, safe, and affordable housing and basic services and upgrading slums. It promotes sustainable transport systems, with special attention to the needs of those in vulnerable situations, and enhances inclusive and sustainable urbanization and capacity for participatory, integrated, and sustainable human settlement planning and management.</p>
+                        <p>This goal also calls for strengthening efforts to protect and safeguard the world's cultural and natural heritage and significantly reducing the number of deaths and the number of people affected by disasters. It represents a commitment to creating cities that are not only engines of economic growth but also centers of community, culture, and sustainable living.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Goal 12 -->
+            <div class="goal-item">
+                <div class="goal-header" style="background-color: #BF8B2E;">
+                    <div class="goal-number">12</div>
+                    <div class="goal-title">Responsible Consumption and Production</div>
+                </div>
+                <div class="goal-content">
+                    <div class="goal-description">
+                        <p>This goal addresses sustainable consumption and production patterns, recognizing that current linear economic models of "take-make-dispose" are fundamentally unsustainable on a finite planet. It calls for doing more and better with less.</p>
+                        <p>The amplification emphasizes implementing the 10-Year Framework of Programmes on Sustainable Consumption and Production Patterns and achieving the sustainable management and efficient use of natural resources. It focuses on substantially reducing waste generation through prevention, reduction, recycling, and reuse and encouraging companies to adopt sustainable practices and integrate sustainability information into their reporting cycle.</p>
+                        <p>This goal also promotes public procurement practices that are sustainable and encourages consumers to make sustainable choices through awareness-raising and education. It represents a fundamental shift from our current consumption-driven economic model toward a circular economy that respects planetary boundaries.</p>
+                    </div>
+                </div>
+            </div>
             
             <!-- Goal 13 -->
-            <div class="goal-item" data-category="environmental">
+            <div class="goal-item">
                 <div class="goal-header" style="background-color: #48773E;">
                     <div class="goal-number">13</div>
                     <div class="goal-title">Climate Action</div>
                 </div>
                 <div class="goal-content">
                     <div class="goal-description">
-                        <p>This is the defining goal of our time, an urgent call for global solidarity. It is not just about "the environment"; it is about human survival, justice, and security. It requires urgent action to combat climate change and its devastating impacts.</p>
-                        <p>This means deep and rapid cuts in greenhouse gas emissions, massive investment in renewable energy, and building resilience to climate-related hazards. It recognizes that those who contributed least to the problem are suffering the most, and thus, climate action is inextricably linked to justice. This goal involves integrating climate change measures into national policies, improving education and awareness on climate change, and implementing commitments by developed countries to climate-related financing.</p>
-                    </div>
-                    <div class="goal-keywords">
-                        <span class="keyword">Climate Justice</span>
-                        <span class="keyword">Emissions Reduction</span>
-                        <span class="keyword">Resilience</span>
-                        <span class="keyword">Climate Adaptation</span>
+                        <p>This goal represents an urgent call for ambitious action to combat climate change and its impacts. It recognizes climate change as a defining issue of our time, with unprecedented impacts on human societies and natural ecosystems.</p>
+                        <p>The amplification requires strengthening resilience and adaptive capacity to climate-related hazards and natural disasters in all countries. It emphasizes integrating climate change measures into national policies, strategies, and planning, and improving education, awareness-raising, and human and institutional capacity on climate change mitigation, adaptation, impact reduction, and early warning.</p>
+                        <p>This goal also implements the commitment by developed country parties to the United Nations Framework Convention on Climate Change to a goal of mobilizing jointly $100 billion annually by 2020 to address the needs of developing countries and fully operationalize the Green Climate Fund. It recognizes that those who have contributed least to climate change are often suffering its worst impacts, making climate action inextricably linked to global justice and equity.</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Additional goals would continue here in the same pattern -->
-        </div>
-        
-        <div class="nav-buttons">
-            <button class="nav-btn">Previous</button>
-            <button class="nav-btn">Next</button>
+            <!-- Goal 14 -->
+            <div class="goal-item">
+                <div class="goal-header" style="background-color: #007DD6;">
+                    <div class="goal-number">14</div>
+                    <div class="goal-title">Life Below Water</div>
+                </div>
+                <div class="goal-content">
+                    <div class="goal-description">
+                        <p>This goal focuses on conserving and sustainably using the oceans, seas, and marine resources for sustainable development. It recognizes that healthy oceans are essential for human survival, climate regulation, and global food security.</p>
+                        <p>The amplification emphasizes preventing and significantly reducing marine pollution of all kinds, particularly from land-based activities, including marine debris and nutrient pollution. It focuses on sustainably managing and protecting marine and coastal ecosystems to avoid significant adverse impacts, including by strengthening their resilience, and taking action for their restoration to achieve healthy and productive oceans.</p>
+                        <p>This goal also calls for minimizing and addressing the impacts of ocean acidification and effectively regulating harvesting and ending overfishing, illegal, unreported, and unregulated fishing and destructive fishing practices. It represents a commitment to protecting this vital global commons that covers nearly three-quarters of our planet's surface.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Goal 15 -->
+            <div class="goal-item">
+                <div class="goal-header" style="background-color: #5DB84C;">
+                    <div class="goal-number">15</div>
+                    <div class="goal-title">Life on Land</div>
+                </div>
+                <div class="goal-content">
+                    <div class="goal-description">
+                        <p>This goal focuses on protecting, restoring, and promoting sustainable use of terrestrial ecosystems, sustainably managing forests, combating desertification, and halting and reversing land degradation and halting biodiversity loss. It recognizes that terrestrial ecosystems are essential for human survival, providing food, water, air, and numerous other services.</p>
+                        <p>The amplification emphasizes ensuring the conservation, restoration, and sustainable use of terrestrial and inland freshwater ecosystems and their services, in particular forests, wetlands, mountains, and drylands. It focuses on promoting the implementation of sustainable management of all types of forests, halting deforestation, restoring degraded forests, and substantially increasing afforestation and reforestation globally.</p>
+                        <p>This goal also calls for combating desertification, restoring degraded land and soil, and taking urgent and significant action to reduce the degradation of natural habitats, halt the loss of biodiversity, and protect and prevent the extinction of threatened species. It represents a commitment to being stewards of the land that sustains us.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Goal 16 -->
+            <div class="goal-item">
+                <div class="goal-header" style="background-color: #00689D;">
+                    <div class="goal-number">16</div>
+                    <div class="goal-title">Peace, Justice and Strong Institutions</div>
+                </div>
+                <div class="goal-content">
+                    <div class="goal-description">
+                        <p>This goal promotes peaceful and inclusive societies for sustainable development, provides access to justice for all, and builds effective, accountable, and inclusive institutions at all levels. It recognizes that peace, justice, and strong institutions are both enablers and outcomes of sustainable development.</p>
+                        <p>The amplification focuses on significantly reducing all forms of violence and related death rates everywhere and ending abuse, exploitation, trafficking, and all forms of violence against and torture of children. It promotes the rule of law at the national and international levels and ensures equal access to justice for all.</p>
+                        <p>This goal also calls for developing effective, accountable, and transparent institutions at all levels and ensuring responsive, inclusive, participatory, and representative decision-making at all levels. It represents a commitment to creating societies where all people can live free from fear and violence and where institutions serve the people rather than special interests.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Goal 17 -->
+            <div class="goal-item">
+                <div class="goal-header" style="background-color: #19486A;">
+                    <div class="goal-number">17</div>
+                    <div class="goal-title">Partnerships for the Goals</div>
+                </div>
+                <div class="goal-content">
+                    <div class="goal-description">
+                        <p>This goal strengthens the means of implementation and revitalizes the Global Partnership for Sustainable Development. It recognizes that the SDGs can only be realized with strong global partnerships and cooperation.</p>
+                        <p>The amplification emphasizes strengthening domestic resource mobilization, including through international support to developing countries, to improve domestic capacity for tax and other revenue collection. It focuses on enhancing policy coherence for sustainable development and respecting each country's policy space and leadership to establish and implement policies for poverty eradication and sustainable development.</p>
+                        <p>This goal also calls for enhancing the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology, and financial resources. It represents a commitment to collective action and shared responsibility in addressing the world's most pressing challenges.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -475,32 +428,5 @@
         <p>© 2023 Amplified Sustainable Development Goals | Created for educational purposes</p>
         <p>The content on this page provides detailed explanations of the UN SDGs and is not an official UN publication.</p>
     </footer>
-
-    <script>
-        // Simple filtering functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const goalItems = document.querySelectorAll('.goal-item');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const filter = button.getAttribute('data-filter');
-                    
-                    // Update active button
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    
-                    // Filter items
-                    goalItems.forEach(item => {
-                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
 </body>
 </html>
