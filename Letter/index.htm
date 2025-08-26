@@ -1,368 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Job Letters</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #2c3e50, #1a2530);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-        
-        .navigation {
-            display: flex;
-            justify-content: center;
-            background: #f8f9fa;
-            padding: 20px;
-            border-bottom: 1px solid #eaeaea;
-        }
-        
-        .nav-btn {
-            padding: 12px 25px;
-            margin: 0 10px;
-            border: none;
-            border-radius: 50px;
-            background: #2c3e50;
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .nav-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-        }
-        
-        .nav-btn.active {
-            background: #3498db;
-        }
-        
-        .appointment-btn { background: #27ae60; }
-        .acceptance-btn { background: #3498db; }
-        .rejection-btn { background: #e74c3c; }
-        
-        .letters-container {
-            padding: 30px;
-            min-height: 600px;
-        }
-        
-        .letter {
-            display: none;
-            margin-bottom: 40px;
-            padding: 30px;
-            border-radius: 8px;
-            background: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            border-left: 5px solid #2c3e50;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        .letter.active {
-            display: block;
-        }
-        
-        .letter-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eaeaea;
-        }
-        
-        .letter-title {
-            font-size: 1.8rem;
-            color: #2c3e50;
-        }
-        
-        .letter-type {
-            background: #e8f4fc;
-            color: #2c3e50;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-        }
-        
-        .letter-content {
-            margin-bottom: 25px;
-        }
-        
-        .letter-footer {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px solid #eaeaea;
-            font-style: italic;
-            color: #666;
-        }
-        
-        .signature {
-            font-weight: 600;
-            margin-top: 40px;
-        }
-        
-        .contact-info {
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-        
-        .appointment { border-left-color: #27ae60; }
-        .appointment .letter-type { background: #e6f7ee; color: #27ae60; }
-        
-        .acceptance { border-left-color: #3498db; }
-        .acceptance .letter-type { background: #e8f4fc; color: #3498db; }
-        
-        .rejection { border-left-color: #e74c3c; }
-        .rejection .letter-type { background: #fbebea; color: #e74c3c; }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @media (max-width: 768px) {
-            .letter-header {
-                flex-direction: column;
-            }
-            
-            .letter-type {
-                margin-top: 10px;
-                align-self: flex-start;
-            }
-            
-            .navigation {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .nav-btn {
-                margin: 8px 0;
-                width: 80%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Job Letters</title>
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    .doc {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 50px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      page-break-after: always;
+    }
+    h2 {
+      text-align: center;
+      text-decoration: underline;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .signature {
+      margin-top: 60px;
+    }
+    @media print {
+      body { background: white; }
+      .doc { box-shadow: none; border: none; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Professional Job Letters</h1>
-            <p class="subtitle">Appointment, Acceptance, and Rejection Letters</p>
-        </header>
-        
-        <div class="navigation">
-            <button class="nav-btn appointment-btn active" data-letter="appointment">Appointment Letter</button>
-            <button class="nav-btn acceptance-btn" data-letter="acceptance">Acceptance Letter</button>
-            <button class="nav-btn rejection-btn" data-letter="rejection">Rejection Letter</button>
-        </div>
-        
-        <div class="letters-container">
-            <!-- Appointment Letter -->
-            <div id="appointment" class="letter appointment active">
-                <div class="letter-header">
-                    <h2 class="letter-title">Job Appointment Letter</h2>
-                    <div class="letter-type">Appointment</div>
-                </div>
-                
-                <div class="letter-content">
-                    <p><strong>Date:</strong> October 15, 2023</p>
-                    <p><strong>To:</strong> Jane Doe</p>
-                    <p><strong>Position:</strong> Senior Marketing Manager</p>
-                    <br>
-                    
-                    <p>Dear Jane Doe,</p>
-                    <br>
-                    
-                    <p>We are pleased to offer you the position of Senior Marketing Manager at InnovateTech Solutions. After careful consideration of your qualifications and experience, we believe you will be a valuable addition to our team.</p>
-                    <br>
-                    
-                    <p><strong>Details of your appointment:</strong></p>
-                    <ul>
-                        <li><strong>Start Date:</strong> November 1, 2023</li>
-                        <li><strong>Salary:</strong> $85,000 per annum</li>
-                        <li><strong>Benefits:</strong> Health insurance, 401(k) matching, 20 days PTO</li>
-                        <li><strong>Reporting To:</strong> Director of Marketing</li>
-                        <li><strong>Work Hours:</strong> 9:00 AM to 5:00 PM, Monday to Friday</li>
-                        <li><strong>Probation Period:</strong> 3 months</li>
-                    </ul>
-                    <br>
-                    
-                    <p>Please sign and return a copy of this letter by October 22, 2023 to indicate your acceptance of this offer. If you have any questions, please do not hesitate to contact us.</p>
-                    <br>
-                    
-                    <p>We look forward to welcoming you to our team and are excited about the contributions we know you will make to our company.</p>
-                </div>
-                
-                <div class="signature">
-                    <p>Sincerely,</p>
-                    <p>Michael Johnson</p>
-                    <p>Human Resources Director</p>
-                    <p>InnovateTech Solutions</p>
-                </div>
-                
-                <div class="contact-info">
-                    <p>Email: hr@innovatetech.com | Phone: (555) 123-4567</p>
-                    <p>Address: 123 Business Park, Suite 450, San Francisco, CA 94107</p>
-                </div>
-                
-                <div class="letter-footer">
-                    <p>This letter constitutes an official offer of employment.</p>
-                </div>
-            </div>
-            
-            <!-- Acceptance Letter -->
-            <div id="acceptance" class="letter acceptance">
-                <div class="letter-header">
-                    <h2 class="letter-title">Job Offer Acceptance Letter</h2>
-                    <div class="letter-type">Acceptance</div>
-                </div>
-                
-                <div class="letter-content">
-                    <p><strong>Date:</strong> October 18, 2023</p>
-                    <p><strong>To:</strong> Michael Johnson</p>
-                    <p><strong>Position:</strong> Senior Marketing Manager</p>
-                    <br>
-                    
-                    <p>Dear Mr. Johnson,</p>
-                    <br>
-                    
-                    <p>I am writing to formally accept the offer of employment for the position of Senior Marketing Manager at InnovateTech Solutions. Thank you for providing me with this opportunity.</p>
-                    <br>
-                    
-                    <p>I am excited to join the team and contribute to the company's success. The terms of employment as outlined in your offer letter are acceptable, and I look forward to starting on November 1, 2023.</p>
-                    <br>
-                    
-                    <p>Please let me know if there is any additional paperwork or information you require from me before my start date. I can be reached at jane.doe@email.com or (555) 987-6543.</p>
-                    <br>
-                    
-                    <p>Thank you again for this opportunity. I am eager to begin this new chapter in my career with InnovateTech Solutions.</p>
-                </div>
-                
-                <div class="signature">
-                    <p>Sincerely,</p>
-                    <p>Jane Doe</p>
-                </div>
-                
-                <div class="contact-info">
-                    <p>Email: jane.doe@email.com | Phone: (555) 987-6543</p>
-                    <p>Address: 456 Oak Avenue, San Francisco, CA 94102</p>
-                </div>
-                
-                <div class="letter-footer">
-                    <p>This letter confirms acceptance of the employment offer.</p>
-                </div>
-            </div>
-            
-            <!-- Rejection Letter -->
-            <div id="rejection" class="letter rejection">
-                <div class="letter-header">
-                    <h2 class="letter-title">Job Application Rejection Letter</h2>
-                    <div class="letter-type">Rejection</div>
-                </div>
-                
-                <div class="letter-content">
-                    <p><strong>Date:</strong> October 15, 2023</p>
-                    <p><strong>To:</strong> John Smith</p>
-                    <p><strong>Position:</strong> Senior Marketing Manager</p>
-                    <br>
-                    
-                    <p>Dear John Smith,</p>
-                    <br>
-                    
-                    <p>Thank you for taking the time to interview for the Senior Marketing Manager position at InnovateTech Solutions. We appreciate your interest in our company and the opportunity to learn more about your qualifications.</p>
-                    <br>
-                    
-                    <p>After careful consideration, we have decided to move forward with another candidate whose experience more closely aligns with our current needs. This decision was not easy, as we were impressed with your background and skills.</p>
-                    <br>
-                    
-                    <p>We will keep your resume on file for future opportunities and wish you the best in your job search. We have no doubt that you will find a suitable position where you can make valuable contributions.</p>
-                    <br>
-                    
-                    <p>Thank you again for your interest in InnovateTech Solutions. We appreciate the time and effort you invested in the application process.</p>
-                </div>
-                
-                <div class="signature">
-                    <p>Sincerely,</p>
-                    <p>Michael Johnson</p>
-                    <p>Human Resources Director</p>
-                    <p>InnovateTech Solutions</p>
-                </div>
-                
-                <div class="contact-info">
-                    <p>Email: hr@innovatetech.com | Phone: (555) 123-4567</p>
-                    <p>Address: 123 Business Park, Suite 450, San Francisco, CA 94107</p>
-                </div>
-                
-                <div class="letter-footer">
-                    <p>We appreciate your understanding and wish you success in your career endeavors.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('.nav-btn');
-            const letters = document.querySelectorAll('.letter');
-            
-            buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const letterId = this.getAttribute('data-letter');
-                    
-                    // Update active button
-                    buttons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Show selected letter
-                    letters.forEach(letter => {
-                        letter.classList.remove('active');
-                        if (letter.id === letterId) {
-                            letter.classList.add('active');
-                        }
-                    });
-                });
-            });
-        });
-    </script>
+  <!-- Appointment Letter -->
+  <div class="doc">
+    <h2>Appointment Letter</h2>
+    <p><b>Date:</b> 26 August 2025</p>
+    <p><b>To</b><br>
+    Musfiqur Jahin<br>
+    Dhaka, Bangladesh</p>
+
+    <p>Dear Musfiqur Jahin,</p>
+
+    <p>We are pleased to offer you the position of <b>Software Engineer</b> at <b>TechNova Solutions Ltd.</b>. Your appointment is effective from <b>1st September 2025</b>. You will be reporting to the Head of the Software Development Department.</p>
+
+    <p>Your starting salary will be <b>BDT 60,000 per month</b>, along with standard company benefits. Further details will be provided in your joining package.</p>
+
+    <p>We welcome you to TechNova Solutions Ltd. and look forward to a long and successful association.</p>
+
+    <p>Sincerely,</p>
+    <div class="signature">
+      <b>Mr. Rahman</b><br>
+      HR Manager<br>
+      TechNova Solutions Ltd.
+    </div>
+  </div>
+
+  <!-- Acceptance Letter -->
+  <div class="doc">
+    <h2>Acceptance Letter</h2>
+    <p><b>Date:</b> 27 August 2025</p>
+    <p><b>To</b><br>
+    Mr. Rahman<br>
+    HR Manager<br>
+    TechNova Solutions Ltd.</p>
+
+    <p>Dear Mr. Rahman,</p>
+
+    <p>I am writing to formally accept the appointment for the position of <b>Software Engineer</b> at <b>TechNova Solutions Ltd.</b> I am grateful for the opportunity and would like to confirm my joining date as <b>1st September 2025</b>.</p>
+
+    <p>I look forward to contributing my skills and knowledge to the success of the organization. Thank you once again for this opportunity.</p>
+
+    <p>Sincerely,</p>
+    <div class="signature">
+      <b>Musfiqur Jahin</b><br>
+      Dhaka, Bangladesh
+    </div>
+  </div>
+
+  <!-- Rejection Letter -->
+  <div class="doc">
+    <h2>Rejection Letter</h2>
+    <p><b>Date:</b> 28 August 2025</p>
+    <p><b>To</b><br>
+    Musfiqur Jahin<br>
+    Dhaka, Bangladesh</p>
+
+    <p>Dear Musfiqur Jahin,</p>
+
+    <p>We appreciate the time and effort you took to apply and interview for the <b>Software Engineer</b> position at <b>TechNova Solutions Ltd.</b> After careful consideration, we regret to inform you that we will not be moving forward with your application at this time.</p>
+
+    <p>Please know that this decision does not reflect negatively on your skills and potential. We will keep your resume on file for future opportunities that may better match your profile.</p>
+
+    <p>We wish you all the best in your future endeavors.</p>
+
+    <p>Sincerely,</p>
+    <div class="signature">
+      <b>Mr. Rahman</b><br>
+      HR Manager<br>
+      TechNova Solutions Ltd.
+    </div>
+  </div>
+
 </body>
 </html>
