@@ -2,109 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Job Letters</title>
+  <title>Job Letters - Musfiqur Jahin</title>
   <style>
     body {
-      font-family: "Times New Roman", serif;
+      font-family: 'Times New Roman', serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      background: #f5f5f5;
     }
-    .doc {
-      max-width: 800px;
-      margin: 40px auto;
-      background: white;
-      padding: 50px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      border-radius: 8px;
+    .page {
+      background: #fff;
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      padding: 30mm 20mm;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
       page-break-after: always;
     }
     h2 {
       text-align: center;
       text-decoration: underline;
+      margin-bottom: 20px;
     }
-    p {
+    .letter-body {
       line-height: 1.6;
       font-size: 16px;
     }
     .signature {
-      margin-top: 60px;
+      margin-top: 40px;
     }
     @media print {
-      body { background: white; }
-      .doc { box-shadow: none; border: none; }
+      body { background: none; }
+      .page { margin: 0; box-shadow: none; }
     }
   </style>
 </head>
 <body>
 
   <!-- Appointment Letter -->
-  <div class="doc">
+  <div class="page">
     <h2>Appointment Letter</h2>
-    <p><b>Date:</b> 26 August 2025</p>
-    <p><b>To</b><br>
-    Musfiqur Jahin<br>
-    Dhaka, Bangladesh</p>
+    <div class="letter-body">
+      <p>Date: 26 August 2025</p>
+      <p>To,<br>
+      Musfiqur Jahin<br>
+      Dhaka, Bangladesh</p>
 
-    <p>Dear Musfiqur Jahin,</p>
+      <p>Dear Musfiqur Jahin,</p>
+      <p>We are pleased to offer you the position of <strong>Software Engineer</strong> at <strong>TechNova Solutions Ltd.</strong>. Your joining date will be <strong>1st September 2025</strong>, and you will be reporting to the Head of Engineering.</p>
 
-    <p>We are pleased to offer you the position of <b>Software Engineer</b> at <b>TechNova Solutions Ltd.</b>. Your appointment is effective from <b>1st September 2025</b>. You will be reporting to the Head of the Software Development Department.</p>
+      <p>Your starting salary will be <strong>BDT 60,000 per month</strong> with additional benefits as per company policy. Please confirm your acceptance of this appointment at the earliest.</p>
 
-    <p>Your starting salary will be <b>BDT 60,000 per month</b>, along with standard company benefits. Further details will be provided in your joining package.</p>
+      <p>We look forward to having you on our team.</p>
 
-    <p>We welcome you to TechNova Solutions Ltd. and look forward to a long and successful association.</p>
-
-    <p>Sincerely,</p>
-    <div class="signature">
-      <b>Mr. Rahman</b><br>
-      HR Manager<br>
-      TechNova Solutions Ltd.
+      <div class="signature">
+        <p>Sincerely,</p>
+        <p><strong>Rahman Ahmed</strong><br>HR Manager<br>TechNova Solutions Ltd.</p>
+      </div>
     </div>
   </div>
 
   <!-- Acceptance Letter -->
-  <div class="doc">
+  <div class="page">
     <h2>Acceptance Letter</h2>
-    <p><b>Date:</b> 27 August 2025</p>
-    <p><b>To</b><br>
-    Mr. Rahman<br>
-    HR Manager<br>
-    TechNova Solutions Ltd.</p>
+    <div class="letter-body">
+      <p>Date: 27 August 2025</p>
+      <p>To,<br>
+      Rahman Ahmed<br>
+      HR Manager<br>
+      TechNova Solutions Ltd.</p>
 
-    <p>Dear Mr. Rahman,</p>
+      <p>Dear Mr. Ahmed,</p>
+      <p>I am writing to formally accept the appointment for the position of <strong>Software Engineer</strong> at <strong>TechNova Solutions Ltd.</strong>, as mentioned in your appointment letter dated 26 August 2025.</p>
 
-    <p>I am writing to formally accept the appointment for the position of <b>Software Engineer</b> at <b>TechNova Solutions Ltd.</b> I am grateful for the opportunity and would like to confirm my joining date as <b>1st September 2025</b>.</p>
+      <p>I sincerely appreciate this opportunity and assure you of my dedication and commitment. I will join on <strong>1st September 2025</strong> as requested.</p>
 
-    <p>I look forward to contributing my skills and knowledge to the success of the organization. Thank you once again for this opportunity.</p>
-
-    <p>Sincerely,</p>
-    <div class="signature">
-      <b>Musfiqur Jahin</b><br>
-      Dhaka, Bangladesh
+      <div class="signature">
+        <p>Sincerely,</p>
+        <p><strong>Musfiqur Jahin</strong></p>
+      </div>
     </div>
   </div>
 
-  <!-- Rejection Letter -->
-  <div class="doc">
-    <h2>Rejection Letter</h2>
-    <p><b>Date:</b> 28 August 2025</p>
-    <p><b>To</b><br>
-    Musfiqur Jahin<br>
-    Dhaka, Bangladesh</p>
+  <!-- Rejection Letter (from Employer) -->
+  <div class="page">
+    <h2>Rejection Letter (Employer)</h2>
+    <div class="letter-body">
+      <p>Date: 26 August 2025</p>
+      <p>To,<br>
+      Musfiqur Jahin<br>
+      Dhaka, Bangladesh</p>
 
-    <p>Dear Musfiqur Jahin,</p>
+      <p>Dear Musfiqur Jahin,</p>
+      <p>We thank you for your interest in the position of <strong>Software Engineer</strong> at <strong>TechNova Solutions Ltd.</strong>. After careful consideration, we regret to inform you that you have not been selected for the role at this time.</p>
 
-    <p>We appreciate the time and effort you took to apply and interview for the <b>Software Engineer</b> position at <b>TechNova Solutions Ltd.</b> After careful consideration, we regret to inform you that we will not be moving forward with your application at this time.</p>
+      <p>We appreciate the time and effort you invested in the interview process and wish you the very best in your career endeavors.</p>
 
-    <p>Please know that this decision does not reflect negatively on your skills and potential. We will keep your resume on file for future opportunities that may better match your profile.</p>
+      <div class="signature">
+        <p>Sincerely,</p>
+        <p><strong>Rahman Ahmed</strong><br>HR Manager<br>TechNova Solutions Ltd.</p>
+      </div>
+    </div>
+  </div>
 
-    <p>We wish you all the best in your future endeavors.</p>
-
-    <p>Sincerely,</p>
-    <div class="signature">
-      <b>Mr. Rahman</b><br>
+  <!-- Rejection Letter (from Candidate) -->
+  <div class="page">
+    <h2>Rejection Letter (Candidate)</h2>
+    <div class="letter-body">
+      <p>Date: 28 August 2025</p>
+      <p>To,<br>
+      Rahman Ahmed<br>
       HR Manager<br>
-      TechNova Solutions Ltd.
+      TechNova Solutions Ltd.</p>
+
+      <p>Dear Mr. Ahmed,</p>
+      <p>I am grateful for the offer of appointment as a <strong>Software Engineer</strong> at <strong>TechNova Solutions Ltd.</strong>. After careful consideration, I regret to inform you that I will not be able to accept the position at this time due to personal reasons.</p>
+
+      <p>I truly appreciate the confidence you have shown in me and wish TechNova Solutions continued success.</p>
+
+      <div class="signature">
+        <p>Sincerely,</p>
+        <p><strong>Musfiqur Jahin</strong></p>
+      </div>
     </div>
   </div>
 
